@@ -2,10 +2,6 @@ import random
 import string
 from faker import Faker
 
-# логин и пароль для авторизации
-user_email = "kategrinchenko5777@yandex.ru"
-user_password = "123456qa"
-
 
 # рандомное имя для регистрации
 def some_name():

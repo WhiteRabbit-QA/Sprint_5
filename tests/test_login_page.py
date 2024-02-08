@@ -1,7 +1,7 @@
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from tests.locators import TestLocators
-import test_data
+import data
 
 
 class TestLogin:
@@ -17,8 +17,8 @@ class TestLogin:
 
         # заполнить поля валидными данными
         WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(TestLocators.AUTH_FORM_TITLE))
-        driver.find_element(*TestLocators.AUTH_FORM_INPUT_EMAIL).send_keys(test_data.user_email)
-        driver.find_element(*TestLocators.AUTH_FORM_INPUT_PASSWORD).send_keys(test_data.user_password)
+        driver.find_element(*TestLocators.AUTH_FORM_INPUT_EMAIL).send_keys(data.user_email)
+        driver.find_element(*TestLocators.AUTH_FORM_INPUT_PASSWORD).send_keys(data.user_password)
 
         # нажать кнопку "Войти"
         driver.find_element(*TestLocators.AUTH_FORM_BUTTON).click()
@@ -38,8 +38,8 @@ class TestLogin:
 
         # заполнить поля валидными данными
         WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(TestLocators.AUTH_FORM_TITLE))
-        driver.find_element(*TestLocators.AUTH_FORM_INPUT_EMAIL).send_keys(test_data.user_email)
-        driver.find_element(*TestLocators.AUTH_FORM_INPUT_PASSWORD).send_keys(test_data.user_password)
+        driver.find_element(*TestLocators.AUTH_FORM_INPUT_EMAIL).send_keys(data.user_email)
+        driver.find_element(*TestLocators.AUTH_FORM_INPUT_PASSWORD).send_keys(data.user_password)
 
         # нажать кнопку "Войти"
         driver.find_element(*TestLocators.AUTH_FORM_BUTTON).click()
@@ -65,8 +65,8 @@ class TestLogin:
 
         # заполнить поля валидными данными
         WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(TestLocators.AUTH_FORM_TITLE))
-        driver.find_element(*TestLocators.AUTH_FORM_INPUT_EMAIL).send_keys(test_data.user_email)
-        driver.find_element(*TestLocators.AUTH_FORM_INPUT_PASSWORD).send_keys(test_data.user_password)
+        driver.find_element(*TestLocators.AUTH_FORM_INPUT_EMAIL).send_keys(data.user_email)
+        driver.find_element(*TestLocators.AUTH_FORM_INPUT_PASSWORD).send_keys(data.user_password)
 
         # нажать кнопку "Войти"
         driver.find_element(*TestLocators.AUTH_FORM_BUTTON).click()
@@ -92,8 +92,8 @@ class TestLogin:
 
         # заполнить поля валидными данными
         WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(TestLocators.AUTH_FORM_TITLE))
-        driver.find_element(*TestLocators.AUTH_FORM_INPUT_EMAIL).send_keys(test_data.user_email)
-        driver.find_element(*TestLocators.AUTH_FORM_INPUT_PASSWORD).send_keys(test_data.user_password)
+        driver.find_element(*TestLocators.AUTH_FORM_INPUT_EMAIL).send_keys(data.user_email)
+        driver.find_element(*TestLocators.AUTH_FORM_INPUT_PASSWORD).send_keys(data.user_password)
 
         # нажать кнопку "Войти"
         driver.find_element(*TestLocators.AUTH_FORM_BUTTON).click()

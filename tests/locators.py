@@ -12,22 +12,25 @@ class TestLocators:
     HEADER_LOGO = By.CSS_SELECTOR, "nav div a"
 
     # Главная страница - кнопка "Войти в аккаунт"
-    MAIN_BUTTON_LOGIN = By.XPATH, "//section[2]/div/button"
+    MAIN_BUTTON_LOGIN = By.CSS_SELECTOR, "[class*='button_button']"
 
     # Главная страница - вкладка "Булки"
-    MAIN_TAB_BURGERS = By.XPATH, "//div[contains(@class, 'tab_tab')][1]"
+    # MAIN_TAB_BURGERS = By.XPATH, "//div[contains(@class, 'tab_tab')][1]"    # ПРАВИТЬ
+    MAIN_TAB_BURGERS = By.XPATH, "//span[text()='Булки']/parent::*"
 
     # Главная страница - заголовок списка "Булки"
     MAIN_TITLE_BURGERS = By.XPATH, "//h2[contains(@class, 'text') and text()='Булки']"
 
     # Главная страница - вкладка "Соусы"
-    MAIN_TAB_SAUCES = By.XPATH, "//div[contains(@class, 'tab_tab')][2]"
+    # MAIN_TAB_SAUCES = By.XPATH, "//div[contains(@class, 'tab_tab')][2]"    # ПРАВИТЬ
+    MAIN_TAB_SAUCES = By.XPATH, "//span[text()='Соусы']/parent::*"
 
     # Главная страница - заголовок списка "Соусы"
     MAIN_TITLE_SAUCES = By.XPATH, "//h2[contains(@class, 'text') and text()='Соусы']"
 
     # Главная страница - вкладка "Начинки"
-    MAIN_TAB_FILLING = By.XPATH, "//div[contains(@class, 'tab_tab')][3]"
+    # MAIN_TAB_FILLING = By.XPATH, "//div[contains(@class, 'tab_tab')][3]"    # ПРАВИТЬ
+    MAIN_TAB_FILLING = By.XPATH, "//span[text()='Начинки']/parent::*"
 
     # Главная страница - заголовок списка "Начинки"
     MAIN_TITLE_FILLING = By.XPATH, "//h2[contains(@class, 'text') and text()='Начинки']"
@@ -57,10 +60,12 @@ class TestLocators:
     REG_FORM_TITLE = By.XPATH, "//h2[text()='Регистрация']"
 
     # Форма регистрации - поле "Имя"
-    REG_FORM_INPUT_NAME = By.XPATH, "//form/fieldset[1]//input"
+    # REG_FORM_INPUT_NAME = By.XPATH, "//form/fieldset[1]//input"    # ПРАВИТЬ
+    REG_FORM_INPUT_NAME = By.XPATH, "//label[text()='Имя']/following-sibling::input"
 
     # Форма регистрации - поле "Email"
-    REG_FORM_INPUT_EMAIL = By.XPATH, "//form/fieldset[2]//input"
+    # REG_FORM_INPUT_EMAIL = By.XPATH, "//form/fieldset[2]//input"   # ПРАВИТЬ
+    REG_FORM_INPUT_EMAIL = By.XPATH, "//label[text()='Email']/following-sibling::input"
 
     # Форма регистрации - поле "Пароль"
     REG_FORM_INPUT_PASSWORD = By.CSS_SELECTOR, "[type='password']"
@@ -84,4 +89,5 @@ class TestLocators:
     PERSONAL_ACCOUNT_BUTTON_PROFILE = By.LINK_TEXT, "Профиль"
 
     # Личный кабинет - кнопка "Выход"
-    PERSONAL_ACCOUNT_BUTTON_LOG_OUT = By.XPATH, "//li[contains(@class, 'Account_listItem')][3]/button"
+    # PERSONAL_ACCOUNT_BUTTON_LOG_OUT = By.XPATH, "//li[contains(@class, 'Account_listItem')][3]/button"   # ПРАВИТЬ
+    PERSONAL_ACCOUNT_BUTTON_LOG_OUT = By.CSS_SELECTOR, "[class*='Account_button']"

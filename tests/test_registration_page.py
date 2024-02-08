@@ -2,7 +2,7 @@ import pytest
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from tests.locators import TestLocators
-import test_data
+import helpers
 
 
 class TestRegistration:
@@ -26,13 +26,13 @@ class TestRegistration:
         WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(TestLocators.REG_FORM_TITLE))
 
         # заполнить инпут "Имя" валидным значением
-        driver.find_element(*TestLocators.REG_FORM_INPUT_NAME).send_keys(test_data.some_name())
+        driver.find_element(*TestLocators.REG_FORM_INPUT_NAME).send_keys(helpers.some_name())
 
         # заполнить инпут "Email" валидным значением
-        driver.find_element(*TestLocators.REG_FORM_INPUT_EMAIL).send_keys(test_data.reg_email())
+        driver.find_element(*TestLocators.REG_FORM_INPUT_EMAIL).send_keys(helpers.reg_email())
 
         # заполнить инпут "Пароль" валидным значением
-        driver.find_element(*TestLocators.REG_FORM_INPUT_PASSWORD).send_keys(test_data.reg_password())
+        driver.find_element(*TestLocators.REG_FORM_INPUT_PASSWORD).send_keys(helpers.reg_password())
 
         # нажать кнопку "Зарегистрироваться"
         driver.find_element(*TestLocators.REG_FORM_BUTTON).click()
@@ -67,10 +67,10 @@ class TestRegistration:
         driver.find_element(*TestLocators.AUTH_BUTTON_REGISTR).click()
 
         # заполнить инпут "Имя" валидным значением
-        driver.find_element(*TestLocators.REG_FORM_INPUT_NAME).send_keys(test_data.some_name())
+        driver.find_element(*TestLocators.REG_FORM_INPUT_NAME).send_keys(helpers.some_name())
 
         # заполнить инпут "Email" валидным значением
-        driver.find_element(*TestLocators.REG_FORM_INPUT_EMAIL).send_keys(test_data.reg_email())
+        driver.find_element(*TestLocators.REG_FORM_INPUT_EMAIL).send_keys(helpers.reg_email())
 
         # заполнить инпут "Пароль" невалидным значением
         driver.find_element(*TestLocators.REG_FORM_INPUT_PASSWORD).send_keys(wrong_password)
